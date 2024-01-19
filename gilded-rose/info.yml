@@ -1,0 +1,6 @@
+title: The Gilded Rose
+description: Refactor an inventory system and add a new feature to it.
+sources:
+  - https://github.com/exercism/ruby/tree/main/exercises/practice/gilded-rose
+  - https://github.com/emilybache/GildedRose-Refactoring-Kata
+  - https://github.com/jimweirich/gilded_rose_kata
