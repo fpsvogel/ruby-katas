@@ -1,6 +1,3 @@
-require_relative "../test_helper"
-require_relative "start"
-
 class GildedRoseTest < Minitest::Test
   def update_with(sell_in:, quality:, name:, sell_in_change: -1, quality_change: -1)
     item = Item.new(name:, sell_in:, quality:)
