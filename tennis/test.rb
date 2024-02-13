@@ -61,30 +61,18 @@ class TestTennis < Minitest::Test
     game
   end
 
-  def test_score_game_1
-    TEST_CASES.each do |test_case|
-      player1_points, player2_points, score, player1_name, player2_name = test_case
-      game = play_game(TennisGame1, player1_points, player2_points, player1_name, player2_name)
+  variant = 0
 
-      assert_equal(score, game.score)
-    end
-  end
+  while Object.const_defined?("TennisGame#{variant + 1}")
+    variant += 1
 
-  def test_score_game_2
-    TEST_CASES.each do |test_case|
-      player1_points, player2_points, score, player1_name, player2_name = test_case
-      game = play_game(TennisGame2, player1_points, player2_points, player1_name, player2_name)
+    define_method("test_score_for_variant_#{variant}") do
+      TEST_CASES.each do |test_case|
+        player1_points, player2_points, score, player1_name, player2_name = test_case
+        game = play_game(Object.const_get("TennisGame#{variant}"), player1_points, player2_points, player1_name, player2_name)
 
-      assert_equal(score, game.score)
-    end
-  end
-
-  def test_score_game_3
-    TEST_CASES.each do |test_case|
-      player1_points, player2_points, score, player1_name, player2_name = test_case
-      game = play_game(TennisGame3, player1_points, player2_points, player1_name, player2_name)
-
-      assert_equal(score, game.score)
+        assert_equal(score, game.score)
+      end
     end
   end
 end
