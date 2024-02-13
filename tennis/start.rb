@@ -1,7 +1,25 @@
-# TODO: clean up versions 1, 2, 3 below
 # TODO: add versions 4, 5, && 6 from https://github.com/emilybache/Tennis-Refactoring-Kata/tree/main/typescript/src
 
-class TennisGame1
+class TennisGame
+  def won_point
+    raise NotImplementedError, "#{self.class} should have implemented #{__method__}"
+  end
+
+  def score
+    raise NotImplementedError, "#{self.class} should have implemented #{__method__}"
+  end
+
+  def self.inherited(subclass)
+    @subclasses ||= []
+    @subclasses << subclass
+  end
+
+  def self.subclasses
+    @subclasses
+  end
+end
+
+class TennisGame1 < TennisGame
   def initialize(player1_name, player2_name)
     @player1_name = player1_name
     @player2_name = player2_name
@@ -61,7 +79,7 @@ class TennisGame1
   end
 end
 
-class TennisGame2
+class TennisGame2 < TennisGame
   def initialize(player1_name, player2_name)
     @player1_name = player1_name
     @player2_name = player2_name
@@ -166,7 +184,7 @@ class TennisGame2
   end
 end
 
-class TennisGame3
+class TennisGame3 < TennisGame
   def initialize(player1_name, player2_name)
     @p1n = player1_name
     @p2n = player2_name
