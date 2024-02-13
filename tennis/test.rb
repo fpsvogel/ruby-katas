@@ -61,11 +61,12 @@ class TestTennis < Minitest::Test
     game
   end
 
-  variant = 0
+  max_variant = 0
+  while Object.const_defined?("TennisGame#{max_variant + 1}")
+    max_variant += 1
+  end
 
-  while Object.const_defined?("TennisGame#{variant + 1}")
-    variant += 1
-
+  1.upto(max_variant) do |variant|
     define_method("test_score_for_variant_#{variant}") do
       TEST_CASES.each do |test_case|
         player1_points, player2_points, score, player1_name, player2_name = test_case
