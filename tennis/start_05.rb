@@ -9,6 +9,14 @@ module Tennis
       @receiver_score = 0
     end
 
+    def won_point(player_name)
+      if player_name == "player1"
+        @server_score += 1
+      else
+        @receiver_score += 1
+      end
+    end
+
     def score
       result = Deuce.new(
         self,
@@ -48,14 +56,6 @@ module Tennis
 
     def deuce?
       @server_score >= 3 && @receiver_score >= 3 && (@server_score == @receiver_score)
-    end
-
-    def won_point(player_name)
-      if player_name == "player1"
-        @server_score += 1
-      else
-        @receiver_score += 1
-      end
     end
   end
 

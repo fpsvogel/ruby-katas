@@ -9,6 +9,14 @@ module Tennis
       @player2_score = 0
     end
 
+    def won_point(player_name)
+      if player_name == "player1"
+        @player1_score += 1
+      else
+        @player2_score += 1
+      end
+    end
+
     def score
       p1 = @player1_score
       p2 = @player2_score
@@ -57,14 +65,6 @@ module Tennis
       }
 
       lookup[p1][p2]
-    end
-
-    def won_point(player_name)
-      if player_name == "player1"
-        @player1_score += 1
-      else
-        @player2_score += 1
-      end
     end
   end
 end
