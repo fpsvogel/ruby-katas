@@ -1,6 +1,0 @@
-require_relative "start_01"
-require_relative "start_02"
-require_relative "start_03"
-require_relative "start_04"
-require_relative "start_05"
-require_relative "start_06"
