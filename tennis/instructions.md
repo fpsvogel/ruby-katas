@@ -22,7 +22,3 @@ You can read more about Tennis scores on wikipedia which is summarized below:
     If at least three points have been scored by each side and a player has one more point than his opponent, the score of the game is “Advantage” for the player in the lead.
 
 You need only report the score for the current game. Sets and Matches are out of scope.
-
-## Hints
-
-- For context on the different versions of this kata's starting code, see [Emily Bach's introductory video](https://www.youtube.com/watch?v=XifUs1FhWRc).

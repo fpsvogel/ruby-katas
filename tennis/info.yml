@@ -3,3 +3,5 @@ description: Refactor a tennis scoring system.
 sources:
   - https://github.com/emilybache/Tennis-Refactoring-Kata
   - https://sammancoaching.org/kata_descriptions/tennis.html
+intro_video:
+  - https://www.youtube.com/watch?v=XifUs1FhWRc
