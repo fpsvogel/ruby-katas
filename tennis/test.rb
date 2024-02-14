@@ -44,20 +44,6 @@ TEST_CASES = [
    [5, 6, "Advantage player2", "player1", "player2"]
 ]
 
-class String
-  # Based on String#underscore in Active Support, except that numbers are
-  # also treated as a separate word (i.e. separated by an underscore).
-  def snake_case
-    self
-      .gsub(/::/, "/")
-      .gsub(/([A-Z]+)([A-Z][a-z]|\d+)/,'\1_\2')
-      .gsub(/([a-z])([A-Z\d])/,'\1_\2')
-      .gsub(/(\d)([A-Z])/,'\1_\2')
-      .tr("-", "_")
-      .downcase
-  end
-end
-
 class TestTennis < Minitest::Test
   def play_game(tennis_game_class, player1_points, player2_points, player1_name, player2_name)
     game = tennis_game_class.new(player1_name, player2_name)
@@ -75,8 +61,15 @@ class TestTennis < Minitest::Test
     game
   end
 
-  TennisGame.subclasses.each do |tennis_game_class|
-    define_method("test_score_for_#{tennis_game_class.name.snake_case}") do
+  max_variant = 0
+  while Tennis.const_defined?("Game#{max_variant + 1}")
+    max_variant += 1
+  end
+
+  1.upto(max_variant) do |variant_n|
+    define_method("test_score_for_variant_#{variant_n}") do
+      tennis_game_class = Tennis.const_get("Game#{variant_n}")
+
       TEST_CASES.each do |test_case|
         player1_points, player2_points, score, player1_name, player2_name = test_case
         game = play_game(tennis_game_class, player1_points, player2_points, player1_name, player2_name)
