@@ -1,12 +1,23 @@
 # TODO
 
-- <https://github.com/emilybache/SupermarketReceipt-Refactoring-Kata>
-- <https://github.com/emilybache/Parrot-Refactoring-Kata>
-- <https://github.com/emilybache/Yatzy-Refactoring-Kata>
+## Site resources
+
+- CodeMirror code editor component: https://github.com/codemirror/dev
+
+## Kata/exercise collections
+
+- A Ruby port of Kotlin coding challenges: <https://github.com/Arrowsome/ruby-coding-challenges>
+- Advent of Code Ruby solutions: <https://github.com/topics/advent-of-code-ruby>
+
+## Individual katas
+
+- <https://github.com/emilybache/SupermarketReceipt-Refactoring-Kata> with <https://youtu.be/EWB-VhEUoHE>
+- <https://github.com/emilybache/Parrot-Refactoring-Kata> with <https://youtu.be/UxNEHKg_2eA>
+- <https://github.com/emilybache/Yatzy-Refactoring-Kata> with <https://youtu.be/SvcJKNF_nRQ>
 - <https://github.com/emilybache/DungeonEscape-Refactoring-Kata>
 - <https://sammancoaching.org/kata_descriptions/lift.html> and <https://www.codewars.com/kata/58905bfa1decb981da00009e>
 - ? <https://github.com/emilybache/Single-Sign-On-Kata>
-- ? SOLID <https://github.com/emilybache/Racing-Car-Katas>
+- ? SOLID <https://github.com/emilybache/Racing-Car-Katas> with <https://youtu.be/ldthYMeXSoI>
 - ? Approval testing a REST API <https://www.youtube.com/watch?v=4ZYm-Vi2hI4>
 - ? <https://kata-log.rocks/ugly-trivia-kata>
 - ? <https://github.com/matteobaglini/functional-structures-refactoring-kata/tree/master/ruby>
