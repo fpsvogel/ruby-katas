@@ -8,6 +8,7 @@
 
 - A Ruby port of Kotlin coding challenges: <https://github.com/Arrowsome/ruby-coding-challenges>
 - Advent of Code Ruby solutions: <https://github.com/topics/advent-of-code-ruby>
+- Clean Code Developer School - Coding Dojo: <https://ccd-school.de/coding-dojo>
 
 ## Individual katas
 
